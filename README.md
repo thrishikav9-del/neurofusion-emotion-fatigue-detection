@@ -2,58 +2,61 @@
 
 **Multimodal AI Framework for Emotion and Fatigue Detection Using Physiological Signals**
 
-NeuroFusion is a multimodal artificial intelligence framework designed to detect human emotional states and mental fatigue by integrating multiple physiological signals. The system combines electroencephalography (EEG), functional near-infrared spectroscopy (fNIRS), electrocardiography (ECG), and electromyography (EMG) to provide a comprehensive assessment of cognitive and emotional conditions.
+NeuroFusion is a multimodal artificial intelligence framework that detects human emotional states and mental fatigue by analyzing multiple physiological signals. The framework integrates electroencephalography (EEG), functional near-infrared spectroscopy (fNIRS), electrocardiography (ECG), and electromyography (EMG) to provide a comprehensive understanding of cognitive and emotional conditions.
 
-Unlike conventional single-modality approaches, NeuroFusion leverages multimodal biosignal fusion and machine learning techniques to improve the robustness and reliability of emotion and fatigue recognition.
+Unlike conventional approaches that rely on a single biosignal, NeuroFusion combines information from multiple physiological modalities to improve the reliability and robustness of emotion and fatigue detection.
 
 ---
 
 ## Overview
 
-Monitoring emotional state and mental fatigue has become increasingly important in healthcare, workplace productivity, transportation safety, and human-computer interaction. Existing approaches often rely on a single physiological modality, limiting their ability to capture the complex relationships between cognitive and emotional processes.
+Mental fatigue and emotional well-being significantly influence productivity, safety, and overall health. Applications such as healthcare monitoring, driver assistance systems, workplace wellness, and human-computer interaction require accurate methods for continuously assessing a person's cognitive and emotional state.
 
-NeuroFusion addresses these challenges by integrating multiple biosignal modalities into a unified machine learning pipeline. The framework performs signal preprocessing, feature extraction, multimodal fusion, and intelligent classification to support accurate emotion and fatigue detection while enabling future real-time monitoring applications.
+NeuroFusion addresses this challenge through a multimodal machine learning framework that performs signal preprocessing, feature engineering, multimodal fusion, and intelligent classification. By combining complementary physiological signals, the framework provides a scalable foundation for emotion recognition and fatigue assessment with potential applications in next-generation intelligent healthcare systems.
 
 ---
 
 ## Key Features
 
-- Multimodal biosignal integration using EEG, fNIRS, ECG, and EMG
-- Emotion and fatigue detection using machine learning and deep learning techniques
+- Multimodal physiological signal integration
+- Emotion and fatigue detection using AI techniques
 - Signal preprocessing and artifact removal
-- Feature extraction from physiological signals
+- Physiological feature extraction and engineering
 - Feature selection and dimensionality reduction
-- Hybrid learning architecture for multimodal analysis
-- Adaptive feedback framework for fatigue awareness
-- Scalable architecture for future wearable and healthcare applications
+- Machine learning and deep learning pipeline
+- Adaptive feedback and wellness recommendations
+- Extensible architecture for healthcare and wearable applications
 
 ---
 
 ## System Architecture
 
-The NeuroFusion framework follows a four-stage processing pipeline.
+The NeuroFusion framework follows a multi-stage processing pipeline.
 
 ```text
-          EEG      fNIRS      ECG      EMG
-             \        |        |       /
-              \       |        |      /
-               ▼      ▼        ▼     ▼
+                EEG      fNIRS      ECG      EMG
+                   \        |        |       /
+                    \       |        |      /
+                     ▼      ▼        ▼     ▼
          Signal Acquisition & Synchronization
-                       │
-                       ▼
-      Signal Preprocessing & Feature Extraction
-                       │
-                       ▼
+                         │
+                         ▼
+            Signal Preprocessing & Cleaning
+                         │
+                         ▼
+         Physiological Feature Extraction
+                         │
+                         ▼
       Feature Selection & Multimodal Fusion
-                       │
-                       ▼
-      Machine Learning / Deep Learning Model
-                       │
-                       ▼
-      Emotion & Fatigue Classification
-                       │
-                       ▼
-         Adaptive Feedback & Recommendations
+                         │
+                         ▼
+     Machine Learning / Deep Learning Models
+                         │
+                         ▼
+       Emotion & Fatigue Classification
+                         │
+                         ▼
+        Adaptive Feedback & Recommendations
 ```
 
 ---
@@ -69,47 +72,49 @@ The framework processes synchronized physiological signals collected from multip
 - ECG (Electrocardiography)
 - EMG (Electromyography)
 
-These complementary signals provide information about brain activity, cardiovascular responses, muscle activity, and cerebral oxygenation.
+Each modality captures complementary physiological information, enabling a more comprehensive assessment than single-modality systems.
 
 ---
 
-### Signal Processing
+### Signal Preprocessing
 
-Raw physiological signals undergo preprocessing to improve signal quality before analysis.
+Raw physiological signals undergo preprocessing before analysis.
 
-Processing steps include:
+Processing includes:
 
 - Noise filtering
 - Artifact removal
 - Signal normalization
-- Quality assessment
+- Signal quality assessment
+
+These steps improve data quality and enhance model performance.
 
 ---
 
 ### Feature Engineering
 
-Relevant physiological features are extracted from each modality.
+Physiological features are extracted from each signal modality.
 
 Examples include:
 
-**EEG**
+#### EEG
 
 - Frequency band powers
+- Spectral features
 - Statistical descriptors
-- Spectral characteristics
 
-**ECG**
+#### ECG
 
 - Heart Rate Variability (HRV)
 - Time-domain features
 - Frequency-domain features
 
-**fNIRS**
+#### fNIRS
 
 - Oxygenated hemoglobin concentration
 - Deoxygenated hemoglobin concentration
 
-**EMG**
+#### EMG
 
 - Root Mean Square (RMS)
 - Signal envelope
@@ -119,25 +124,26 @@ Examples include:
 
 ### Machine Learning Pipeline
 
-The extracted features are processed through a machine learning pipeline consisting of:
+The extracted features are processed through an intelligent learning pipeline consisting of:
 
 - Feature normalization
 - Dimensionality reduction
 - Feature selection
 - Classification
 
-The framework supports both traditional machine learning models and deep learning architectures for multimodal analysis.
+The framework supports both classical machine learning algorithms and deep learning architectures for multimodal analysis.
 
 ---
 
 ### Adaptive Feedback
 
-Based on the predicted emotional state and fatigue level, the framework can provide personalized recommendations such as:
+Based on the predicted emotional state and fatigue level, the system can generate personalized recommendations such as:
 
-- Short rest breaks
-- Breathing exercises
-- Workload adjustments
-- Wellness recommendations
+- Taking short breaks
+- Performing breathing exercises
+- Adjusting workload
+- Improving posture
+- Maintaining hydration
 
 ---
 
@@ -149,10 +155,10 @@ Based on the predicted emotional state and fatigue level, the framework can prov
 | Source | IEEE Dataport |
 | Participants | 16 |
 | Sessions | 64 |
-| Duration | Approximately 48 hours |
+| Total Duration | Approximately 48 hours |
 | Modalities | EEG, fNIRS, ECG, EMG |
 
-The dataset contains synchronized multimodal physiological recordings annotated with emotion and fatigue labels.
+The dataset contains synchronized multimodal physiological recordings with corresponding emotion and fatigue annotations.
 
 ---
 
@@ -162,9 +168,9 @@ The dataset contains synchronized multimodal physiological recordings annotated 
 |-----------|------------|
 | Programming Language | Python |
 | Signal Processing | NumPy, SciPy |
+| Data Analysis | Pandas |
 | Machine Learning | Scikit-learn |
 | Deep Learning | CNN, LSTM |
-| Data Analysis | Pandas |
 | Visualization | Matplotlib |
 | Development Environment | Jupyter Notebook |
 
@@ -175,8 +181,8 @@ The dataset contains synchronized multimodal physiological recordings annotated 
 ```text
 neurofusion-emotion-fatigue-detection/
 │
-├── bsp.ipynb
-├── paper.pdf
+├── bsp.ipynb                  # Model implementation and experiments
+├── project_report.pdf         # Complete project documentation
 ├── README.md
 ├── LICENSE
 └── .gitignore
@@ -184,9 +190,33 @@ neurofusion-emotion-fatigue-detection/
 
 ---
 
+## Installation
+
+### Clone the repository
+
+```bash
+git clone https://github.com/thrishikav9-del/neurofusion-emotion-fatigue-detection.git
+
+cd neurofusion-emotion-fatigue-detection
+```
+
+### Install dependencies
+
+```bash
+pip install numpy scipy pandas matplotlib scikit-learn notebook
+```
+
+### Launch the notebook
+
+```bash
+jupyter notebook bsp.ipynb
+```
+
+---
+
 ## Methodology
 
-The framework follows the following workflow:
+The NeuroFusion framework follows the workflow below:
 
 1. Acquire synchronized physiological signals.
 2. Preprocess and clean raw biosignal data.
@@ -194,23 +224,23 @@ The framework follows the following workflow:
 4. Perform feature selection and dimensionality reduction.
 5. Train machine learning and deep learning models.
 6. Predict emotional state and fatigue level.
-7. Generate adaptive recommendations.
+7. Generate adaptive feedback for the user.
 
 ---
 
-## Experimental Results
+## Experimental Evaluation
 
-The framework was evaluated using standard machine learning evaluation metrics for emotion and fatigue classification.
+The framework is evaluated using standard machine learning metrics for classification.
 
-Performance evaluation includes:
+Evaluation metrics include:
 
-- Classification Accuracy
+- Accuracy
 - Precision
 - Recall
 - F1-Score
 - Confusion Matrix
 
-Detailed experimental analysis, feature importance, and performance comparisons are available in the accompanying project report.
+Detailed experimental results, performance analysis, and feature importance are available in the accompanying project report.
 
 ---
 
@@ -218,7 +248,7 @@ Detailed experimental analysis, feature importance, and performance comparisons 
 
 **Input**
 
-Multimodal physiological signals
+Multimodal physiological signals:
 
 - EEG
 - fNIRS
@@ -227,7 +257,7 @@ Multimodal physiological signals
 
 ↓
 
-**Output**
+**Predicted Output**
 
 ```text
 Fatigue Probability : 0.992
@@ -236,7 +266,8 @@ Predicted State : Fatigue
 
 Confidence : High
 
-Recommendation:
+Recommendation
+
 • Take a 15-minute break
 • Perform breathing exercises
 • Stay hydrated
@@ -251,47 +282,48 @@ Recommendation:
 - Mental Wellness Assessment
 - Driver Fatigue Detection
 - Workplace Productivity Monitoring
-- Human-Computer Interaction
+- Human–Computer Interaction
 - Smart Wearable Systems
 - Cognitive State Monitoring
+- Biomedical AI Research
 
 ---
 
 ## Advantages
 
-- Integrates multiple physiological modalities
-- Improved robustness compared to single-sensor systems
-- Flexible machine learning framework
-- Scalable architecture for future real-time deployment
-- Supports multimodal biomedical AI research
+- Integrates multiple physiological modalities into a unified framework
+- Provides more robust analysis than single-sensor approaches
+- Flexible machine learning pipeline
+- Scalable architecture for future deployment
+- Applicable across healthcare, transportation, and wearable technologies
 
 ---
 
 ## Limitations
 
-- Requires specialized biosignal acquisition hardware
-- Computationally intensive multimodal processing
+- Requires specialized physiological sensing hardware
+- High computational cost for multimodal processing
 - Performance depends on signal quality
-- Data acquisition setup is relatively complex
+- Complex data acquisition procedures
 
 ---
 
 ## Future Enhancements
 
-- Real-time wearable integration
+- Real-time wearable device integration
 - Edge AI deployment
 - Advanced multimodal deep learning architectures
 - Personalized fatigue prediction
-- Mobile application integration
+- Mobile healthcare application
 - Cloud-based monitoring dashboard
 
 ---
 
 ## Documentation
 
-The complete project report describing the methodology, experiments, and implementation details is available in:
+The complete methodology, implementation details, experimental analysis, and results are available in:
 
-- `paper.pdf`
+- **project_report.pdf**
 
 ---
 
@@ -303,7 +335,7 @@ This project is licensed under the MIT License.
 
 ## Disclaimer
 
-This project was developed for academic and research purposes to demonstrate multimodal artificial intelligence techniques for emotion and fatigue detection. It is intended to support research and educational applications and should not be used as a substitute for professional medical diagnosis.
+This project was developed for academic and research purposes to demonstrate multimodal artificial intelligence techniques for emotion and fatigue detection. The framework is intended for educational and research applications and should not be considered a medical diagnostic system.
 
 ---
 
